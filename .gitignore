@@ -91,3 +91,317 @@ application/logs/*
   },
   "type": "standard"
 }
+{
+  "id": "acct_1ICoudKYKo8CA3q0",
+  "object": "account",
+  "business_profile": {
+    "mcc": "5734",
+    "name": "first person point of view solutions℠",
+    "product_description": "first person point of view solutions℠\nsoftware usage, 10 second video clips, 30 seconds at a time.\n",
+    "support_address": {
+      "city": null,
+      "country": null,
+      "line1": null,
+      "line2": null,
+      "postal_code": null,
+      "state": null
+    },
+    "support_email": "erik.b@talech.com",
+    "support_phone": "+16028884717",
+    "support_url": "https://linktr.ee/remoteviewing",
+    "url": "https://bliesze.wordpress.com"
+  },
+  "capabilities": {
+    "card_payments": "active",
+    "transfers": "active"
+  },
+  "charges_enabled": true,
+  "country": "US",
+  "created": 1611419075,
+  "default_currency": "usd",
+  "details_submitted": true,
+  "email": "erik.b@talech.com",
+  "external_accounts": {
+    "object": "list",
+    "data": [
+      {
+        "id": "ba_1ITcatKYKo8CA3q0kLY27tbX",
+        "object": "bank_account",
+        "account": "acct_1ICoudKYKo8CA3q0",
+        "account_holder_name": null,
+        "account_holder_type": null,
+        "available_payout_methods": [
+          "standard"
+        ],
+        "bank_name": "US BANK NA",
+        "country": "US",
+        "currency": "usd",
+        "default_for_currency": true,
+        "fingerprint": "i4aoJo2rTRRbXZPt",
+        "last4": "4822",
+        "metadata": {},
+        "routing_number": "122105155",
+        "status": "new"
+      }
+    ],
+    "has_more": false,
+    "url": "/v1/accounts/acct_1ICoudKYKo8CA3q0/external_accounts"
+  },
+  "metadata": {},
+  "payouts_enabled": true,
+  "requirements": {
+    "current_deadline": null,
+    "currently_due": [],
+    "disabled_reason": null,
+    "errors": [],
+    "eventually_due": [],
+    "past_due": [],
+    "pending_verification": []
+  },
+  "settings": {
+    "bacs_debit_payments": {},
+    "branding": {
+      "icon": null,
+      "logo": null,
+      "primary_color": null,
+      "secondary_color": null
+    },
+    "card_payments": {
+      "decline_on": {
+        "avs_failure": false,
+        "cvc_failure": true
+      },
+      "statement_descriptor_prefix": "1STPRSNPOV"
+    },
+    "dashboard": {
+      "display_name": "first person point of view solutions℠",
+      "timezone": "America/Phoenix"
+    },
+    "payments": {
+      "statement_descriptor": "FIRST PERSON POINT OF ",
+      "statement_descriptor_kana": null,
+      "statement_descriptor_kanji": null
+    },
+    "payouts": {
+      "debit_negative_balances": true,
+      "schedule": {
+        "delay_days": 2,
+        "interval": "daily"
+      },
+      "statement_descriptor": null
+    },
+    "sepa_debit_payments": {}
+  },
+  "tos_acceptance": {
+    "date": 1615427944,
+    "ip": "72.201.171.61",
+    "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0.3 Safari/605.1.15"
+  },
+  "type": "express"
+}
+const stripe = require('stripe')('sk_test_51ICoudKYKo8CA3q0eqFXWNH1WJ4n7dsw06w6Va5FvwiHOUdab84Jnnm97XgSxrdqAed9VNNgEHdYxOGx6JaQWT6Z00udEN4HuV');
+
+const account = await stripe.accounts.create({
+  type: 'custom',
+  country: 'US',
+  email: 'jenny.rosen@example.com',
+  capabilities: {
+    card_payments: {requested: true},
+    transfers: {requested: true},
+  },
+});
+{
+  "id": "acct_1ICoudKYKo8CA3q0",
+  "object": "account",
+  "business_profile": {
+    "mcc": "5734",
+    "name": "first person point of view solutions℠",
+    "product_description": "first person point of view solutions℠\nsoftware usage, 10 second video clips, 30 seconds at a time.\n",
+    "support_address": {
+      "city": null,
+      "country": null,
+      "line1": null,
+      "line2": null,
+      "postal_code": null,
+      "state": null
+    },
+    "support_email": "erik.b@talech.com",
+    "support_phone": "+16028884717",
+    "support_url": "https://linktr.ee/remoteviewing",
+    "url": "https://bliesze.wordpress.com"
+  },
+  "business_type": "individual",
+  "capabilities": {
+    "card_payments": {
+      "requested": true
+    },
+    "transfers": {
+      "requested": true
+    }
+  },
+  "charges_enabled": true,
+  "company": {
+    "address": {
+      "city": "Scottsdale",
+      "country": "US",
+      "line1": "3202 N 66th ST",
+      "line2": "Apt 4",
+      "postal_code": "85251",
+      "state": "AZ"
+    },
+    "directors_provided": false,
+    "executives_provided": false,
+    "name": null,
+    "owners_provided": false,
+    "phone": "+16028884717",
+    "tax_id_provided": false,
+    "verification": {
+      "document": {
+        "back": null,
+        "details": null,
+        "details_code": null,
+        "front": null
+      }
+    }
+  },
+  "country": "US",
+  "created": 1611419075,
+  "default_currency": "usd",
+  "details_submitted": true,
+  "email": "jenny.rosen@example.com",
+  "external_accounts": {
+    "object": "list",
+    "data": [
+      {
+        "id": "ba_1ITcatKYKo8CA3q0kLY27tbX",
+        "object": "bank_account",
+        "account": "acct_1ICoudKYKo8CA3q0",
+        "account_holder_name": null,
+        "account_holder_type": null,
+        "available_payout_methods": [
+          "standard"
+        ],
+        "bank_name": "US BANK NA",
+        "country": "US",
+        "currency": "usd",
+        "default_for_currency": true,
+        "fingerprint": "i4aoJo2rTRRbXZPt",
+        "last4": "4822",
+        "metadata": {},
+        "routing_number": "122105155",
+        "status": "new"
+      }
+    ],
+    "has_more": false,
+    "url": "/v1/accounts/acct_1ICoudKYKo8CA3q0/external_accounts"
+  },
+  "individual": {
+    "id": "person_J5o703hzELUV76",
+    "object": "person",
+    "account": "acct_1ICoudKYKo8CA3q0",
+    "address": {
+      "city": "Scottsdale",
+      "country": "US",
+      "line1": "3202 N 66th ST",
+      "line2": "Apt #4",
+      "postal_code": "85251",
+      "state": "AZ"
+    },
+    "created": 1615422949,
+    "dob": {
+      "day": 10,
+      "month": 6,
+      "year": 1974
+    },
+    "email": "crown11@me.com",
+    "first_name": "Erik",
+    "id_number_provided": true,
+    "last_name": "Bliesze",
+    "metadata": {},
+    "phone": "+16028884717",
+    "relationship": {
+      "director": false,
+      "executive": false,
+      "owner": false,
+      "percent_ownership": null,
+      "representative": true,
+      "title": null
+    },
+    "requirements": {
+      "currently_due": [],
+      "errors": [],
+      "eventually_due": [],
+      "past_due": [],
+      "pending_verification": []
+    },
+    "ssn_last_4_provided": true,
+    "verification": {
+      "additional_document": {
+        "back": null,
+        "details": null,
+        "details_code": null,
+        "front": null
+      },
+      "details": null,
+      "details_code": null,
+      "document": {
+        "back": null,
+        "details": null,
+        "details_code": null,
+        "front": null
+      },
+      "status": "verified"
+    }
+  },
+  "metadata": {},
+  "payouts_enabled": true,
+  "requirements": {
+    "current_deadline": null,
+    "currently_due": [],
+    "disabled_reason": null,
+    "errors": [],
+    "eventually_due": [],
+    "past_due": [],
+    "pending_verification": []
+  },
+  "settings": {
+    "bacs_debit_payments": {},
+    "branding": {
+      "icon": null,
+      "logo": null,
+      "primary_color": null,
+      "secondary_color": null
+    },
+    "card_payments": {
+      "decline_on": {
+        "avs_failure": false,
+        "cvc_failure": true
+      },
+      "statement_descriptor_prefix": "1STPRSNPOV"
+    },
+    "dashboard": {
+      "display_name": "first person point of view solutions℠",
+      "timezone": "America/Phoenix"
+    },
+    "payments": {
+      "statement_descriptor": "FIRST PERSON POINT OF ",
+      "statement_descriptor_kana": null,
+      "statement_descriptor_kanji": null
+    },
+    "payouts": {
+      "debit_negative_balances": true,
+      "schedule": {
+        "delay_days": 2,
+        "interval": "daily"
+      },
+      "statement_descriptor": null
+    },
+    "sepa_debit_payments": {}
+  },
+  "tos_acceptance": {
+    "date": 1615427944,
+    "ip": "72.201.171.61",
+    "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0.3 Safari/605.1.15"
+  },
+  "type": "custom"
+}
