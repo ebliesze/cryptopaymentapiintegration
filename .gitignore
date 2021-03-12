@@ -15,3 +15,79 @@ application/logs/*
 !application/logs/index.html
 !application/logs/.htaccess
 /vendor/
+{
+  "id": "acct_1ICoudKYKo8CA3q0",
+  "object": "account",
+  "business_profile": {
+    "mcc": "5734",
+    "name": "first person point of view solutions℠",
+    "product_description": "first person point of view solutions℠\nsoftware usage, 10 second video clips, 30 seconds at a time.\n",
+    "support_address": {
+      "city": null,
+      "country": null,
+      "line1": null,
+      "line2": null,
+      "postal_code": null,
+      "state": null
+    },
+    "support_email": "erik.b@talech.com",
+    "support_phone": "+16028884717",
+    "support_url": "https://linktr.ee/remoteviewing",
+    "url": "https://bliesze.wordpress.com"
+  },
+  "capabilities": {
+    "card_payments": "active",
+    "transfers": "active"
+  },
+  "charges_enabled": true,
+  "country": "US",
+  "default_currency": "usd",
+  "details_submitted": true,
+  "email": "erik.b@talech.com",
+  "metadata": {},
+  "payouts_enabled": true,
+  "requirements": {
+    "current_deadline": null,
+    "currently_due": [],
+    "disabled_reason": null,
+    "errors": [],
+    "eventually_due": [],
+    "past_due": [],
+    "pending_verification": []
+  },
+  "settings": {
+    "bacs_debit_payments": {},
+    "branding": {
+      "icon": null,
+      "logo": null,
+      "primary_color": null,
+      "secondary_color": null
+    },
+    "card_payments": {
+      "decline_on": {
+        "avs_failure": false,
+        "cvc_failure": true
+      },
+      "statement_descriptor_prefix": "1STPRSNPOV"
+    },
+    "dashboard": {
+      "display_name": "first person point of view solutions℠",
+      "timezone": "America/Phoenix"
+    },
+    "payments": {
+      "statement_descriptor": "FIRST PERSON POINT OF ",
+      "statement_descriptor_kana": null,
+      "statement_descriptor_kanji": null
+    },
+    "payouts": {
+      "debit_negative_balances": true,
+      "schedule": {
+        "delay_days": 2,
+        "interval": "daily"
+      },
+      "statement_descriptor": null
+    },
+    "sepa_debit_payments": {}
+  },
+  "type": "standard"
+}
